@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button"
 import { allProducts } from "@/lib/data"
 import { useCart } from "@/lib/cart-context"
 import { useSearchParams, useRouter } from "next/navigation"
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, Suspense } from "react"
 import { CheckCircle2, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { items, selectedItemIds, removeItem } = useCart()
@@ -211,5 +211,17 @@ export default function CheckoutPage() {
         </div>
       </main>
     </div>
+  )
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={
+        <div className="min-h-screen bg-black flex items-center justify-center">
+            <p className="text-white font-display text-xl animate-pulse">Loading Checkout...</p>
+        </div>
+    }>
+        <CheckoutContent />
+    </Suspense>
   )
 }
