@@ -79,8 +79,8 @@ export default function HomePage() {
       {/* Featured Drop Preview - More Pop */}
       <section className="py-32 px-6 bg-secondary/5 relative overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="flex lg:flex-row flex-col-reverse gap-10 lg:gap-16 items-center">
-            <div className="relative group perspective-1000 order-2 lg:order-1">
+          <div className="flex lg:flex-row flex-col-reverse gap-10 lg:gap-16 items-center justify-center">
+            <div className="relative group perspective-1000 order-2 lg:order-1 flex-1 w-full flex justify-center">
               {/* Decorative elements behind image */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-border/20 rotate-45 z-0 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
@@ -88,7 +88,7 @@ export default function HomePage() {
               <img
                 src="/nike-air-jordan-1-travis-scott-sneaker-product-sho.jpg"
                 alt="Featured drop"
-                className="relative z-10 w-full shadow-2xl transition-transform duration-700 group-hover:scale-105 group-hover:-rotate-2 border-4 border-white transform-gpu"
+                className="relative z-10 w-full max-w-lg mx-auto shadow-2xl transition-transform duration-700 group-hover:scale-105 group-hover:-rotate-2 border-4 border-white transform-gpu"
               />
 
               {/* Float badge */}
@@ -100,7 +100,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="space-y-6 md:space-y-10 order-1 lg:order-2 relative z-20">
+            <div className="space-y-6 md:space-y-10 order-1 lg:order-2 relative z-20 flex-1">
               <div>
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-primary text-black font-bold tracking-widest text-sm uppercase mb-4 md:mb-6">
                   <span className="w-2 h-2 rounded-full bg-black animate-pulse" />

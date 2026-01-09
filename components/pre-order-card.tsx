@@ -65,7 +65,7 @@ export function PreOrderCard({ id, name, image, dropDate, slotsRemaining, totalS
         <div className="flex items-center justify-between pt-2">
           <span className="text-2xl font-display tracking-wide">₱{price.toLocaleString()}</span>
           <Link href={`/vault/${id}`}>
-            <Button disabled={isSoldOut} className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button disabled={isSoldOut} className="bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer">
               {isSoldOut ? "Sold Out" : "Reserve Slot"}
             </Button>
           </Link>
