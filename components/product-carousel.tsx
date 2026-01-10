@@ -67,10 +67,10 @@ export function ProductCarousel() {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           style={{ x }}
-          className="flex gap-8 px-4 py-8"
+          className="flex gap-4 md:gap-8 px-4 py-8"
         >
           {products.map((product) => (
-            <div key={product.id} className="flex-shrink-0 w-[320px]">
+            <div key={product.id} className="flex-shrink-0 w-[calc(50vw-24px)] bg-red-300 md:w-[320px]">
               <ProductCard product={product} />
             </div>
           ))}

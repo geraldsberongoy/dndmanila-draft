@@ -57,7 +57,7 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full max-h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto max-w-full">
-          <div className="flex items-end justify-between mb-16 px-6 md:px-12">
+          <div className="flex items-end justify-between mb-12 md:px-12">
             <div>
               <span className="text-primary tracking-widest text-sm font-bold uppercase mb-2 block">Curated Selection</span>
               <h3 className="text-4xl md:text-6xl lg:text-7xl font-display tracking-wide leading-none text-white">
@@ -65,7 +65,7 @@ export default function HomePage() {
               </h3>
             </div>
             <Link href="/shop" className="group flex items-center gap-3 text-white hover:text-primary transition-colors pb-2">
-              <span className="text-lg uppercase tracking-widest font-bold">View All</span>
+              <span className="hidden md:block text-lg uppercase tracking-widest font-bold">View All</span>
               <div className="p-2 border border-white/20 rounded-full group-hover:border-primary group-hover:bg-primary group-hover:text-black transition-all">
                 <ArrowRight className="w-5 h-5" />
               </div>
