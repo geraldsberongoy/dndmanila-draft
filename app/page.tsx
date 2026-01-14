@@ -16,7 +16,7 @@ import { FOOTWEAR_BRANDS, APPAREL_BRANDS } from "@/lib/data"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Header />
 
       {/* Hero Section */}

@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Jet black & deep grays for urban night aesthetic */
-  --background: oklch(0.12 0 0); /* Jet black */
+  /* Jet black & deep grays for urban night aesthetic - Updated to premium charcoal */
+  --background: oklch(0.14 0.01 240); /* Deep cool charcoal/navy tint - premium feel */
   --foreground: oklch(0.98 0 0); /* Off-white */
   --card: oklch(0.18 0 0); /* Graphite */
   --card-foreground: oklch(0.98 0 0);
@@ -51,7 +51,7 @@
 }
 
 .dark {
-  --background: oklch(0.12 0 0);
+  --background: oklch(0.14 0.01 240);
   --foreground: oklch(0.98 0 0);
   --card: oklch(0.18 0 0);
   --card-foreground: oklch(0.98 0 0);
@@ -133,6 +133,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: radial-gradient(circle at top center, oklch(0.18 0.01 240) 0%, oklch(0.12 0.02 240) 40%, oklch(0.08 0.02 240) 100%);
     overflow-x: hidden;
   }
 }
