@@ -1,6 +1,12 @@
 
 import { SharedCategoryPage } from "@/components/shop/shared-category-page"
 
-export default function ApparelPage() {
-  return <SharedCategoryPage category="apparel" />
+interface PageProps {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function ApparelPage(props: PageProps) {
+  const searchParams = await props.searchParams
+  const brand = typeof searchParams.brand === "string" ? searchParams.brand : undefined
+  return <SharedCategoryPage category="apparel" brand={brand} />
 }

@@ -72,15 +72,6 @@ export const vaultProducts: Product[] = [
 
 export const shoesProducts: Product[] = [
   {
-    id: "nike-air-max-90",
-    name: "Nike Air Max 90",
-    brand: "Nike",
-    price: 7500,
-    image: "/nike-air-max-90-white-sneaker-product-shot.jpg",
-    onFootImage: "/nike-air-max-90-on-foot-urban-street.jpg",
-    category: "shoes",
-  },
-  {
     id: "adidas-samba-og",
     name: "Adidas Samba OG",
     brand: "Adidas",
@@ -125,59 +116,83 @@ export const shoesProducts: Product[] = [
     onFootImage: "/converse-chuck-70-on-foot-casual-style.jpg",
     category: "shoes",
   },
+  {
+    id: "nike-dunk-low-grey-fog",
+    name: "Nike Dunk Low Grey Fog",
+    brand: "Nike",
+    price: 7800,
+    image: "/nike-dunk-low-grey-fog-sneaker.png",
+    category: "shoes",
+  },
+  {
+    id: "asics-gel-kayano-14",
+    name: "Asics Gel-Kayano 14",
+    brand: "Asics",
+    price: 9200,
+    image: "/asics-gel-kayano-14-cream-silver-sneaker.png",
+    category: "shoes",
+  },
+  {
+    id: "salomon-xt-6",
+    name: "Salomon XT-6",
+    brand: "Salomon",
+    price: 11500,
+    image: "/salomon-xt-6-black-sneaker.png",
+    category: "shoes",
+  },
 ]
 
 export const apparelProducts: Product[] = [
   {
-    id: "oversized-street-hoodie",
-    name: "Oversized Street Hoodie",
-    brand: "DND MNL",
+    id: "essentials-hoodie-black",
+    name: "Fear of God Essentials Hoodie",
+    brand: "Essentials",
     price: 3200,
     image: "/black-oversized-hoodie-streetwear-product-flat-lay.jpg",
     onBodyImage: "/black-oversized-hoodie-on-model-urban-street.jpg",
     category: "apparel",
   },
   {
-    id: "manila-nights-tee",
-    name: "Manila Nights Tee",
-    brand: "DND MNL",
-    price: 1500,
+    id: "supreme-box-logo-tee",
+    name: "Supreme Box Logo Tee",
+    brand: "Supreme",
+    price: 4500,
     image: "/black-graphic-t-shirt-manila-streetwear-product.jpg",
     onBodyImage: "/placeholder.svg?height=400&width=400",
     category: "apparel",
   },
   {
-    id: "cargo-pants",
-    name: "Cargo Pants",
-    brand: "Urban Essentials",
-    price: 2800,
+    id: "kith-cargo-pants",
+    name: "Kith Mercer Cargo Pants",
+    brand: "Kith",
+    price: 6800,
     image: "/cargo-pants.png",
     onBodyImage: "/cargo-pants.png",
     category: "apparel",
   },
   {
-    id: "windbreaker-jacket",
-    name: "Windbreaker Jacket",
-    brand: "Street Core",
-    price: 4200,
+    id: "stussy-windbreaker",
+    name: "Stussy Graffiti Windbreaker",
+    brand: "Stussy",
+    price: 5200,
     image: "/windbreaker.png",
     onBodyImage: "/windbreaker.png",
     category: "apparel",
   },
   {
-    id: "track-pants",
-    name: "Track Pants",
-    brand: "Urban Essentials",
-    price: 2200,
+    id: "essentials-track-pants",
+    name: "Essentials Track Pants",
+    brand: "Essentials",
+    price: 2800,
     image: "/track-pants.png",
     onBodyImage: "/track-pants.png",
     category: "apparel",
   },
   {
-    id: "premium-cap",
-    name: "Premium Cap",
-    brand: "DND MNL",
-    price: 1200,
+    id: "supreme-camp-cap",
+    name: "Supreme Camp Cap",
+    brand: "Supreme",
+    price: 2200,
     image: "/premium-cap.png",
     onBodyImage: "/premium-cap.png",
     category: "apparel",
@@ -185,3 +200,65 @@ export const apparelProducts: Product[] = [
 ]
 
 export const allProducts: Product[] = [...shoesProducts, ...apparelProducts, ...vaultProducts]
+
+export const FOOTWEAR_BRANDS = [
+  {
+    id: "jordan",
+    name: "JORDAN",
+    image: "/air-jordan-1-on-foot-street-style.jpg",
+    href: "/shop/shoes?brand=jordan",
+    description: "Flight Heritage"
+  },
+  {
+    id: "nike",
+    name: "NIKE",
+    image: "/nike-dunk-low-panda-sneaker.jpg",
+    href: "/shop/shoes?brand=nike",
+    description: "Swoosh Icons"
+  },
+  {
+    id: "new-balance",
+    name: "NEW BALANCE",
+    image: "/new-balance-574-on-foot-lifestyle-shot.jpg",
+    href: "/shop/shoes?brand=new+balance",
+    description: "Dad Shoe Est."
+  },
+  {
+    id: "adidas",
+    name: "ADIDAS",
+    image: "/adidas-samba-on-foot-casual-wear.jpg",
+    href: "/shop/shoes?brand=adidas",
+    description: "Three Stripes"
+  },
+]
+
+export const APPAREL_BRANDS = [
+  {
+    id: "essentials",
+    name: "ESSENTIALS",
+    image: "/essentials-hoodie.png",
+    href: "/shop/apparel?brand=essentials",
+    description: "The New Standard"
+  },
+  {
+    id: "supreme",
+    name: "SUPREME",
+    image: "/supreme-streetwear.png",
+    href: "/shop/apparel?brand=supreme",
+    description: "World Famous"
+  },
+  {
+    id: "kith",
+    name: "KITH",
+    image: "/kith-lifestyle.png",
+    href: "/shop/apparel?brand=kith",
+    description: "Just Us"
+  },
+  {
+    id: "stussy",
+    name: "STUSSY",
+    image: "/stussy-retro.png",
+    href: "/shop/apparel?brand=stussy",
+    description: "International Tribe"
+  },
+]

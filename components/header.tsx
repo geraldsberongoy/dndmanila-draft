@@ -38,6 +38,18 @@ export function Header() {
     }
   }, [isSearchOpen])
 
+  // Lock body scroll when search or mobile menu is open
+  useEffect(() => {
+    if (isSearchOpen || isMobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [isSearchOpen, isMobileMenuOpen])
+
   const searchResults = searchQuery.trim() 
     ? allProducts.filter(p => 
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -139,7 +151,7 @@ export function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl flex flex-col pt-32 px-6"
+                className="fixed inset-0 z-[60] bg-black/75 backdrop-blur-xl flex flex-col pt-32 px-6"
             >
                 <div className="container mx-auto max-w-4xl relative">
                     <button 

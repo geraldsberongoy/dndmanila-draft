@@ -5,6 +5,14 @@ import { ArrowRight } from "lucide-react"
 import { ProductCarousel } from "@/components/product-carousel"
 import { HeroProductSlideshow } from "@/components/hero-product-slideshow"
 import { Marquee } from "@/components/marquee"
+import { BrandGrid } from "@/components/brand-grid"
+import { InquirySection } from "@/components/inquiry-section"
+import { FaqSection } from "@/components/faq-section"
+import { FOOTWEAR_BRANDS, APPAREL_BRANDS } from "@/lib/data"
+
+
+
+
 
 export default function HomePage() {
   return (
@@ -50,34 +58,31 @@ export default function HomePage() {
       </section>
 
       <Marquee />
+      
+      <BrandGrid items={FOOTWEAR_BRANDS} />
+      <BrandGrid items={APPAREL_BRANDS} prefix="Shop by" highlight="Apparel" />
 
       {/* Featured Products with Glow */}
       <section className="py-32 px-6 border-b border-white/5 relative overflow-hidden">
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full max-h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-        
-        <div className="container mx-auto max-w-full">
-          <div className="flex items-end justify-between mb-12 md:px-12">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex items-end justify-between mb-12">
             <div>
-              <span className="text-primary tracking-widest text-sm font-bold uppercase mb-2 block">Curated Selection</span>
-              <h3 className="text-4xl md:text-6xl lg:text-7xl font-display tracking-wide leading-none text-white">
-                Trending Now
+              <span className="text-primary tracking-widest text-sm font-bold uppercase mb-2 block">The Vault</span>
+              <h3 className="text-4xl md:text-6xl font-display uppercase text-white leading-none">
+                Shop by <span className="text-muted-foreground">Shoes</span>
               </h3>
             </div>
-            <Link href="/shop" className="group flex items-center gap-3 text-white hover:text-primary transition-colors pb-2">
-              <span className="hidden md:block text-lg uppercase tracking-widest font-bold">View All</span>
-              <div className="p-2 border border-white/20 rounded-full group-hover:border-primary group-hover:bg-primary group-hover:text-black transition-all">
-                <ArrowRight className="w-5 h-5" />
-              </div>
-            </Link>
           </div>
-
+        </div>
+        <div className="container mx-auto max-w-full">
           <ProductCarousel />
         </div>
       </section>
 
       {/* Featured Drop Preview - More Pop */}
-      <section className="py-32 px-6 bg-secondary/5 relative overflow-hidden">
+      <section className="py-32 px-6 bg-white/5 relative overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="flex lg:flex-row flex-col-reverse gap-10 lg:gap-16 items-center justify-center">
             <div className="relative group perspective-1000 order-2 lg:order-1 flex-1 w-full flex justify-center">
@@ -146,6 +151,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FaqSection />
+      
+      <InquirySection />
     </div>
   )
 }

@@ -6,15 +6,15 @@ import Link from "next/link"
 import { motion, useMotionValue, animate, useMotionTemplate } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { ProductCard } from "@/components/unified-product-card"
-import { allProducts } from "@/lib/data"
+import { shoesProducts } from "@/lib/data"
 
 export function ProductCarousel() {
   const [width, setWidth] = useState(0)
   const carousel = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
   
-  // Use a subset of products for the carousel
-  const products = allProducts.slice(0, 6).map(p => ({
+  // Use the shoes products for the carousel
+  const products = shoesProducts.map(p => ({
      ...p,
      // Ensure props match Product interface of ProductCard
      href: `/shop/${p.category}/${p.id}`

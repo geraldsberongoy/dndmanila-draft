@@ -11,7 +11,7 @@ export default function VaultPage() {
         <div className="container mx-auto max-w-7xl">
           {/* Section Header */}
           <div className="mb-16 space-y-4">
-            <h1 className="text-6xl font-display tracking-wider">Incoming Drops</h1>
+            <h1 className="text-4xl md:text-5xl font-display tracking-wider">Incoming Drops</h1>
             <p className="text-muted-foreground text-lg">Limited slots. No restocks.</p>
           </div>
 
