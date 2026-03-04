@@ -1,0 +1,7 @@
+{
+  "name": "dndmanila",
+  "compatibility_date": "2026-03-04",
+  "compatibility_flags": [
+    "nodejs_compat" 
+  ]
+}
